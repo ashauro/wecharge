@@ -1,8 +1,1 @@
-{
-    "type": "FeatureCollection",
-    "features": [
-        {"type": "Feature", "id": 0, "geometry": {"type": "Point", "coordinates": [55.831903, 37.411961]}},
-        {"type": "Feature", "id": 1, "geometry": {"type": "Point", "coordinates": [55.763338, 37.565466]}},
-        {"type": "Feature", "id": 2, "geometry": {"type": "Point", "coordinates": [55.763338, 37.616378]}}
-    ]
-}
+{"type": "FeatureCollection", "features": [{"type": "Feature", "id": 1, "geometry": {"type": "Point", "coordinates": [55.73361, 37.587874]}}]}

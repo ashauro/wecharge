@@ -2,23 +2,20 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.core import serializers
 from chargemap.models import ChargeStation
+import json
 
-
-# Create your views here.
 
 def dojson(request):
-    json_dict = {
-        "type": "FeatureCollection",
-        "features": [
-            {"type": "Feature", "id": 0, "geometry": {"type": "Point", "coordinates": [55.831903, 37.411961]}},
-            {"type": "Feature", "id": 1, "geometry": {"type": "Point", "coordinates": [55.763338, 37.565466]}},
-            {"type": "Feature", "id": 2, "geometry": {"type": "Point", "coordinates": [55.763338, 37.616378]}}
-        ]
-    }
-    model_station = ChargeStation.objects.all()
-    for station in model_station:
-        print(station.charge_station_latitude)
-    return HttpResponse("JSON is DONE!")
+    all_stations_list = {"type": "FeatureCollection", "features": []}
+    for station in ChargeStation.objects.all():
+        json_station = {"type": "Feature", "id": station.pk,
+                "geometry": {"type": "Point",
+                             "coordinates": [station.harge_station_longtitude,
+                                             station.charge_station_latitude]}}
+        all_stations_list["features"].append(json_station)
+    with open('static/js/data.json', 'w', encoding='utf-8') as file_to_write:
+        json.dump(all_stations_list, file_to_write)
+    return HttpResponse("JSON готов!")
 
 
 def index(request):
