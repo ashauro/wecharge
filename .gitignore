@@ -1,3 +1,9 @@
 *.sqlite3
+<<<<<<< HEAD
 *.DS_Store
 *.json
+=======
+env/
+*.DS_Store
+__pycache__/
+>>>>>>> c06447c2b78c58699ff5ede3b9b68459c9724e02
