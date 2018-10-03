@@ -21,9 +21,11 @@ def dojson(request):
 		station = ChargeStation.objects.get(id=i)
 		json = { "type": "FeatureCollection", "features": [{"type": "Feature", "id": i, "geometry": {"type": "Point", "coordinates": [station.charge_station_latitude, station.harge_station_longtitude]}}]}
 		i += 1
-		#json = {"a":1, "b":2, "c":3}
-		print (json)
-		return HttpResponse(json)
+		with open ('static/js/data.json', 'w', encoding = 'utf-8') as file_to_write:
+			json = str(json).replace('\'','"')
+			file_to_write.write(str(json))
+			print (json)
+		return HttpResponse("JSON готов!")
 
 
 
