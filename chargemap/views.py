@@ -6,10 +6,8 @@ from chargemap.models import ChargeStation
 
 # Create your views here.
 
-def json(request):
-	
+def dojson(request):
 	data = serializers.serialize("json", ChargeStation.objects.all())
-	
 	with open ('AllStations.json', 'w', encoding = 'utf-8') as file:
 		file.write(data)
 
