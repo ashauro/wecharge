@@ -10,8 +10,8 @@ def dojson(request):
     for station in ChargeStation.objects.all():
         json_station = {"type": "Feature", "id": station.pk,
                 "geometry": {"type": "Point",
-                             "coordinates": [station.harge_station_longtitude,
-                                             station.charge_station_latitude]}}
+                             "coordinates": [station.charge_station_latitude,
+                                             station.charge_station_longtitude]}}
         all_stations_list["features"].append(json_station)
     with open('static/js/data.json', 'w', encoding='utf-8') as file_to_write:
         json.dump(all_stations_list, file_to_write)

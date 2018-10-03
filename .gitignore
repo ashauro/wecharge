@@ -1,6 +1,6 @@
 *.sqlite3
 env/
 *.DS_Store
-__pycache__/
+*__pycache__*
 migrations/
 static/js/data.json

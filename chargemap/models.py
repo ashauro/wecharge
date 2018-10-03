@@ -35,7 +35,7 @@ class ChargeStation (models.Model):
     charge_station_name = models.CharField(max_length=100)
     # Координаты 
     charge_station_latitude = models.FloatField(max_length=10, default=0)
-    harge_station_longtitude = models.FloatField(max_length=10, default=0)
+    charge_station_longtitude = models.FloatField(max_length=10, default=0)
     # Тип зарядки
     charge_station_type = models.ForeignKey(ChargeStationType, on_delete=models.CASCADE, default=None)
     # Оператор (Моэск и пр)
