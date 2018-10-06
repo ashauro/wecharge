@@ -1,1 +1,59 @@
-{"type": "FeatureCollection", "features": [{"type": "Feature", "id": 1, "geometry": {"type": "Point", "coordinates": [55.731903, 37.511961]}}, {"type": "Feature", "id": 2, "geometry": {"type": "Point", "coordinates": [55.763338, 37.565466]}}, {"type": "Feature", "id": 3, "geometry": {"type": "Point", "coordinates": [55.763338, 37.541961]}}]}
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "id": 1,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    55.731903,
+                    37.997874
+                ]
+            },
+            "properties": {
+                "balloonContent": "<h4><b>ТЦ \"Глобус\"</b></h4>\n                <p>Зарядка активируется через мобильное приложение Мособлэнерго или через бота @meschargingbot в Телеграм. Для начала зарядки нужно пополнить баланс.</p>\n                 <b>Тип зарядки:</b> Настенная<br>\n                 <b>Мощность:</b> 22<br>\n                 <b>Тип разъема:</b> chargemap.ChargeStationPlugType.None<br>\n                 <b>Статус:</b> Online<br>\n                 <b>Время работы:</b> 24/7<br>",
+                "hintContent": "ТЦ \"Глобус\""
+            },
+            "options": {
+                "preset": "islands#greenDotIcon"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 2,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    55.763338,
+                    37.939374
+                ]
+            },
+            "properties": {
+                "balloonContent": "<h4><b>Заправка Лукойл</b></h4>\n                <p>Новая зарядная станция</p>\n                 <b>Тип зарядки:</b> Напольная<br>\n                 <b>Мощность:</b> 22<br>\n                 <b>Тип разъема:</b> chargemap.ChargeStationPlugType.None<br>\n                 <b>Статус:</b> Online<br>\n                 <b>Время работы:</b> 24/7<br>",
+                "hintContent": "Заправка Лукойл"
+            },
+            "options": {
+                "preset": "islands#greenDotIcon"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 3,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    55.763338,
+                    37.922387
+                ]
+            },
+            "properties": {
+                "balloonContent": "<h4><b>Заправка Роснефть</b></h4>\n                <p>Заправка на Роснефти</p>\n                 <b>Тип зарядки:</b> Настенная<br>\n                 <b>Мощность:</b> 22<br>\n                 <b>Тип разъема:</b> chargemap.ChargeStationPlugType.None<br>\n                 <b>Статус:</b> Online<br>\n                 <b>Время работы:</b> 24/7<br>",
+                "hintContent": "Заправка Роснефть"
+            },
+            "options": {
+                "preset": "islands#greenDotIcon"
+            }
+        }
+    ]
+}
