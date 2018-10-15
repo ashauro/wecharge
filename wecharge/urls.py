@@ -21,4 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('dojson/', views.dojson, name='dojson'),
+    path('user/', include('django.contrib.auth.urls')),
+    path('user/', include('django_registration.backends.one_step.urls'))
 ]
