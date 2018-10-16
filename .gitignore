@@ -2,7 +2,6 @@
 env/
 *.DS_Store
 */__pycache__/
-migrations/
 .idea/
 *.json
 *.txt

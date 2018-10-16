@@ -7,13 +7,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    55.731903,
-                    37.997874
+                    55.773778,
+                    37.612182
                 ]
             },
             "properties": {
-                "balloonContent": "<h4><b>ТЦ \"Глобус\"</b></h4>\n                <p>Зарядка активируется через мобильное приложение Мособлэнерго или через бота @meschargingbot в Телеграм. Для начала зарядки нужно пополнить баланс.</p>\n                 <b>Тип зарядки:</b> Настенная<br>\n                 <b>Мощность:</b> 22<br>\n                 <b>Тип разъема:</b> chargemap.ChargeStationPlugType.None<br>\n                 <b>Статус:</b> Online<br>\n                 <b>Время работы:</b> 24/7<br>",
-                "hintContent": "ТЦ \"Глобус\""
+                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>В настоящее время осуществляются работы по программе «Моя улица», в связи с чем часть зарядных стаций не активна. После выполнения программы зарядные станции будут работать в штатном режиме.</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> chargemap.ChargeStationPlugType.None<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br>",
+                "hintContent": "Зарядная станция"
             },
             "options": {
                 "preset": "islands#greenDotIcon"
@@ -25,13 +25,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    55.763338,
-                    37.939374
+                    55.73402,
+                    37.635718
                 ]
             },
             "properties": {
-                "balloonContent": "<h4><b>Заправка Лукойл</b></h4>\n                <p>Новая зарядная станция</p>\n                 <b>Тип зарядки:</b> Напольная<br>\n                 <b>Мощность:</b> 22<br>\n                 <b>Тип разъема:</b> chargemap.ChargeStationPlugType.None<br>\n                 <b>Статус:</b> Online<br>\n                 <b>Время работы:</b> 24/7<br>",
-                "hintContent": "Заправка Лукойл"
+                "balloonContent": "<h4><b>МОЭСК-EV</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> chargemap.ChargeStationPlugType.None<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Круглосуточно<br>",
+                "hintContent": "МОЭСК-EV"
             },
             "options": {
                 "preset": "islands#greenDotIcon"
@@ -43,13 +43,157 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    55.763338,
-                    37.922387
+                    55.762343,
+                    37.563314
                 ]
             },
             "properties": {
-                "balloonContent": "<h4><b>Заправка Роснефть</b></h4>\n                <p>Заправка на Роснефти</p>\n                 <b>Тип зарядки:</b> Настенная<br>\n                 <b>Мощность:</b> 22<br>\n                 <b>Тип разъема:</b> chargemap.ChargeStationPlugType.None<br>\n                 <b>Статус:</b> Online<br>\n                 <b>Время работы:</b> 24/7<br>",
-                "hintContent": "Заправка Роснефть"
+                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> chargemap.ChargeStationPlugType.None<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br>",
+                "hintContent": "Зарядная станция"
+            },
+            "options": {
+                "preset": "islands#greenDotIcon"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 4,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    55.736012,
+                    37.618659
+                ]
+            },
+            "properties": {
+                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> chargemap.ChargeStationPlugType.None<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br>",
+                "hintContent": "Зарядная станция"
+            },
+            "options": {
+                "preset": "islands#greenDotIcon"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 5,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    55.762373,
+                    37.600441
+                ]
+            },
+            "properties": {
+                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> chargemap.ChargeStationPlugType.None<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br>",
+                "hintContent": "Зарядная станция"
+            },
+            "options": {
+                "preset": "islands#greenDotIcon"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 6,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    55.749582,
+                    37.599561
+                ]
+            },
+            "properties": {
+                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> chargemap.ChargeStationPlugType.None<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br>",
+                "hintContent": "Зарядная станция"
+            },
+            "options": {
+                "preset": "islands#greenDotIcon"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 7,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    55.75626,
+                    37.634793
+                ]
+            },
+            "properties": {
+                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> chargemap.ChargeStationPlugType.None<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br>",
+                "hintContent": "Зарядная станция"
+            },
+            "options": {
+                "preset": "islands#greenDotIcon"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 8,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    55.743233,
+                    37.604358
+                ]
+            },
+            "properties": {
+                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> chargemap.ChargeStationPlugType.None<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br>",
+                "hintContent": "Зарядная станция"
+            },
+            "options": {
+                "preset": "islands#greenDotIcon"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 9,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    55.746411,
+                    37.600379
+                ]
+            },
+            "properties": {
+                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> chargemap.ChargeStationPlugType.None<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br>",
+                "hintContent": "Зарядная станция"
+            },
+            "options": {
+                "preset": "islands#greenDotIcon"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 10,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    55.746765,
+                    37.599031
+                ]
+            },
+            "properties": {
+                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> chargemap.ChargeStationPlugType.None<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br>",
+                "hintContent": "Зарядная станция"
+            },
+            "options": {
+                "preset": "islands#greenDotIcon"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 11,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    55.756994,
+                    37.638171
+                ]
+            },
+            "properties": {
+                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> chargemap.ChargeStationPlugType.None<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br>",
+                "hintContent": "Зарядная станция"
             },
             "options": {
                 "preset": "islands#greenDotIcon"
