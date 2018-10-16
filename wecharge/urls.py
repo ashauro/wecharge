@@ -16,11 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from chargemap import views
+from django_registration.backends.one_step.views import RegistrationView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('dojson/', views.dojson, name='dojson'),
-    path('user/', include('django.contrib.auth.urls')),
-    path('user/', include('django_registration.backends.one_step.urls'))
+    path('user/register/', RegistrationView.as_view(success_url='/profile/'),
+         name='django_registration_register'),
+    path('accounts/', include('django_registration.backends.one_step.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]

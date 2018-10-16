@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+<h1>Авторизация</h1>
+
+    <form class="form" method="post">
+    	{% csrf_token %}
+    	{{ form }}
+    	<input type="submit" value="Submit">
+	</form>
+<ul>
+    <li><a href="#">Забыли пароль?</a></li>
+    <li><a href="#">Регистрация</a></li>
+</ul>
+{% endblock %}
