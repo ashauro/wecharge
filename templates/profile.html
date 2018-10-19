@@ -1,7 +1,17 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block content %}
-<h1>Профиль пользователя</h1>
+<h1>Профиль пользователя {{user.username}}</h1>
+<p>Имя: {{user.first_name}}</p>
+<p>Фамилия: {{user.last_name}}</p>
+<p>Email: {{user.email}}</p>
+<p>Картинка: {{user.profile.user_image}}</p>
+<p>Страна: {{user.profile.user_country}}</p>
+<p>Город: {{user.profile.user_city}}</p>
+<h1>Автомобиль {{user.username}}</h1>
+<p>Машина: {{user.profile.user_car.name}}</p>
+<p>Госномер: {{user.profile.user_car.plate}}</p>
+<p>Мощность, кВт: {{user.profile.user_car.acc}}</p>
 
 
 {% endblock %}

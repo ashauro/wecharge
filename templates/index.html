@@ -3,15 +3,6 @@
 
 {% block content %}
 
-
-    <main role="main" class="container">
-
-      <div class="starter-template">
-        <h1>WeCharge</h1>
-        <p class="lead">Найдите заправку себе по душе!</p>
-      </div>
-
-    </main><!-- /.container -->
 <div id="map"></div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -26,7 +17,7 @@
     function init(){
         var myMap = new ymaps.Map("map", {
             center: [55.76, 37.64],
-            zoom: 10
+            zoom: 11
         }, {
             searchControlProvider: 'yandex#search'
         }),
@@ -36,8 +27,8 @@
             clusterDisableClickZoom: true
         });
 
-    objectManager.objects.options.set('preset', 'islands#greenDotIcon');
-    objectManager.clusters.options.set('preset', 'islands#greenClusterIcons');
+    objectManager.objects.options.set('preset', 'islands#blackDotIcon');
+    objectManager.clusters.options.set('preset', 'islands#blackClusterIcons');
     myMap.geoObjects.add(objectManager);
 
     $.ajax({
