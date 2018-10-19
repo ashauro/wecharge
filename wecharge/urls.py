@@ -22,8 +22,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('dojson/', views.dojson, name='dojson'),
-    path('user/register/', RegistrationView.as_view(success_url='/profile/'),
+    path('user/register/', RegistrationView.as_view(success_url='/users/profile/'),
          name='django_registration_register'),
     path('accounts/', include('django_registration.backends.one_step.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('users/profile/', include('users.urls'), name='profile'),
 ]
