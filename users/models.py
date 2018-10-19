@@ -15,14 +15,14 @@ class Car (models.Model):
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     user_image = models.ImageField(default='default.png', upload_to='users/profile_pics')
-    user_country = models.ForeignKey(Country, on_delete=models.CASCADE)
-    user_city = models.ForeignKey(City, on_delete=models.CASCADE)
+    user_country = models.ForeignKey(Country, null=True, on_delete=models.CASCADE)
+    user_city = models.ForeignKey(City, null=True, on_delete=models.CASCADE)
     user_car = models.ForeignKey(Car, null=True, on_delete=models.CASCADE)
     
     def __str__(self):
         return self.user.username
     
-    def save(self):
+    def save(self, **kwargs):
         super().save()
 
         img = Image.open(self.user_image.path)
