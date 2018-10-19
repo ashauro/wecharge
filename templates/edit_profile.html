@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+<h2>Редактирование профиля {{user.username}}</h2><br>
+
+<form method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+<h5>Изменить основные данные</h5>
+<p>{{u_form}}</p>
+<h5>Изменить дополнительные данные</h5>
+<p>{{p_form}}</p>
+<h5>Изменить данные автомобиля</h5>
+<p>{{c_form}}</p>
+<button type="submit">Сохранить изменения</button>
+</form>
+
+{% endblock %}
+
+
+
