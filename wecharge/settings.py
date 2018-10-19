@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_registration'
+    'django_registration',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +136,11 @@ STATICFILES_DIRS = [
 STATIC_URL = '/static/'
 
 ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
