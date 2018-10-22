@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block content %}
-<h2>Профиль пользователя {{user.username}}</h2>
+<h2>Профиль пользователя {{user.username}}</h2> (<a href="/users/profile/update">Изменить Профиль</a>
+)
 <p>Имя: {{user.first_name}}</p>
 <p>Фамилия: {{user.last_name}}</p>
 <p>Email: {{user.email}}</p>
@@ -12,7 +13,13 @@
 <p>Машина: {{user.profile.user_car.name}}</p>
 <p>Госномер: {{user.profile.user_car.plate}}</p>
 <p>Мощность, кВт: {{user.profile.user_car.acc}}</p>
-<a href="/users/profile/update">Изменить Профиль</a>
+
+<h2>Состояние счета {{user.username}}</h2>
+<p>Текущий баланс: {{user.billing.balance}} руб.</p>
+<p>Бонусы: {{user.billing.bonus_balance}} баллов</p>
+<p>Количество зарядок: {{user.billing.number_of_charges}}</p>
+<p>Потребленная мощность: {{user.billing.cunsumed_power}} кВт</p>
+
 
 {% endblock %}
 
