@@ -29,7 +29,7 @@ def dojson(request):
                  <b>Тип разъема:</b> {4}<br>
                  <b>Статус:</b> {5}<br>
                  <b>Время работы:</b> {6}<br><br>
-                 <p><input type='button' value='Детали'><input type='submit' value='Забронировать на 15 минут'>
+                 <p><input type='submit' value='Забронировать на 15 минут'>
                  <input type='submit' value='Маршрут'></p>
                  """.format(station.charge_station_name,
                                                         station.charge_station_description,

@@ -12,7 +12,7 @@
                 ]
             },
             "properties": {
-                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>В настоящее время осуществляются работы по программе «Моя улица», в связи с чем часть зарядных стаций не активна. После выполнения программы зарядные станции будут работать в штатном режиме.</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> /Type 2//Wall (Euro)/<br>\n                 <b>Статус:</b> Онлайн<br>\n                 <b>Время работы:</b> Нет данных<br><br>\n                 <p><input type='button' onclick='location.href='http://google.com';' value='Детали'><input type='submit' value='Забронировать на 15 минут'>\n                 <input type='submit' value='Маршрут'></p>\n                 ",
+                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>В настоящее время осуществляются работы по программе «Моя улица», в связи с чем часть зарядных стаций не активна. После выполнения программы зарядные станции будут работать в штатном режиме.</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> /Type 2//Wall (Euro)/<br>\n                 <b>Статус:</b> Онлайн<br>\n                 <b>Время работы:</b> Нет данных<br><br>\n                 <p><input type='submit' value='Забронировать на 15 минут'>\n                 <input type='submit' value='Маршрут'></p>\n                 ",
                 "hintContent": "Зарядная станция"
             },
             "options": {
@@ -30,7 +30,7 @@
                 ]
             },
             "properties": {
-                "balloonContent": "<h4><b>МОЭСК-EV</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> /Нет данных/<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Круглосуточно<br><br>\n                 <p><input type='button' onclick='location.href='http://google.com';' value='Детали'><input type='submit' value='Забронировать на 15 минут'>\n                 <input type='submit' value='Маршрут'></p>\n                 ",
+                "balloonContent": "<h4><b>МОЭСК-EV</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> /Нет данных/<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Круглосуточно<br><br>\n                 <p><input type='submit' value='Забронировать на 15 минут'>\n                 <input type='submit' value='Маршрут'></p>\n                 ",
                 "hintContent": "МОЭСК-EV"
             },
             "options": {
@@ -48,7 +48,7 @@
                 ]
             },
             "properties": {
-                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> /Нет данных/<br>\n                 <b>Статус:</b> Онлайн<br>\n                 <b>Время работы:</b> Нет данных<br><br>\n                 <p><input type='button' onclick='location.href='http://google.com';' value='Детали'><input type='submit' value='Забронировать на 15 минут'>\n                 <input type='submit' value='Маршрут'></p>\n                 ",
+                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> /Нет данных/<br>\n                 <b>Статус:</b> Онлайн<br>\n                 <b>Время работы:</b> Нет данных<br><br>\n                 <p><input type='submit' value='Забронировать на 15 минут'>\n                 <input type='submit' value='Маршрут'></p>\n                 ",
                 "hintContent": "Зарядная станция"
             },
             "options": {
@@ -66,7 +66,7 @@
                 ]
             },
             "properties": {
-                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> /Нет данных/<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br><br>\n                 <p><input type='button' onclick='location.href='http://google.com';' value='Детали'><input type='submit' value='Забронировать на 15 минут'>\n                 <input type='submit' value='Маршрут'></p>\n                 ",
+                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> /Нет данных/<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br><br>\n                 <p><input type='submit' value='Забронировать на 15 минут'>\n                 <input type='submit' value='Маршрут'></p>\n                 ",
                 "hintContent": "Зарядная станция"
             },
             "options": {
@@ -84,7 +84,7 @@
                 ]
             },
             "properties": {
-                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> /Нет данных/<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br><br>\n                 <p><input type='button' onclick='location.href='http://google.com';' value='Детали'><input type='submit' value='Забронировать на 15 минут'>\n                 <input type='submit' value='Маршрут'></p>\n                 ",
+                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> /Нет данных/<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br><br>\n                 <p><input type='submit' value='Забронировать на 15 минут'>\n                 <input type='submit' value='Маршрут'></p>\n                 ",
                 "hintContent": "Зарядная станция"
             },
             "options": {
@@ -102,7 +102,7 @@
                 ]
             },
             "properties": {
-                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> /Нет данных/<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br><br>\n                 <p><input type='button' onclick='location.href='http://google.com';' value='Детали'><input type='submit' value='Забронировать на 15 минут'>\n                 <input type='submit' value='Маршрут'></p>\n                 ",
+                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> /Нет данных/<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br><br>\n                 <p><input type='submit' value='Забронировать на 15 минут'>\n                 <input type='submit' value='Маршрут'></p>\n                 ",
                 "hintContent": "Зарядная станция"
             },
             "options": {
@@ -120,7 +120,7 @@
                 ]
             },
             "properties": {
-                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> /Нет данных/<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br><br>\n                 <p><input type='button' onclick='location.href='http://google.com';' value='Детали'><input type='submit' value='Забронировать на 15 минут'>\n                 <input type='submit' value='Маршрут'></p>\n                 ",
+                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> /Нет данных/<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br><br>\n                 <p><input type='submit' value='Забронировать на 15 минут'>\n                 <input type='submit' value='Маршрут'></p>\n                 ",
                 "hintContent": "Зарядная станция"
             },
             "options": {
@@ -138,7 +138,7 @@
                 ]
             },
             "properties": {
-                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> /Нет данных/<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br><br>\n                 <p><input type='button' onclick='location.href='http://google.com';' value='Детали'><input type='submit' value='Забронировать на 15 минут'>\n                 <input type='submit' value='Маршрут'></p>\n                 ",
+                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> /Нет данных/<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br><br>\n                 <p><input type='submit' value='Забронировать на 15 минут'>\n                 <input type='submit' value='Маршрут'></p>\n                 ",
                 "hintContent": "Зарядная станция"
             },
             "options": {
@@ -156,7 +156,7 @@
                 ]
             },
             "properties": {
-                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> /Нет данных/<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br><br>\n                 <p><input type='button' onclick='location.href='http://google.com';' value='Детали'><input type='submit' value='Забронировать на 15 минут'>\n                 <input type='submit' value='Маршрут'></p>\n                 ",
+                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> /Нет данных/<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br><br>\n                 <p><input type='submit' value='Забронировать на 15 минут'>\n                 <input type='submit' value='Маршрут'></p>\n                 ",
                 "hintContent": "Зарядная станция"
             },
             "options": {
@@ -174,7 +174,7 @@
                 ]
             },
             "properties": {
-                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> /Нет данных/<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br><br>\n                 <p><input type='button' onclick='location.href='http://google.com';' value='Детали'><input type='submit' value='Забронировать на 15 минут'>\n                 <input type='submit' value='Маршрут'></p>\n                 ",
+                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> /Нет данных/<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br><br>\n                 <p><input type='submit' value='Забронировать на 15 минут'>\n                 <input type='submit' value='Маршрут'></p>\n                 ",
                 "hintContent": "Зарядная станция"
             },
             "options": {
@@ -192,7 +192,7 @@
                 ]
             },
             "properties": {
-                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> /Нет данных/<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br><br>\n                 <p><input type='button' onclick='location.href='http://google.com';' value='Детали'><input type='submit' value='Забронировать на 15 минут'>\n                 <input type='submit' value='Маршрут'></p>\n                 ",
+                "balloonContent": "<h4><b>Зарядная станция</b></h4>\n                <p>Станция зарядки электромобилей</p>\n                 <b>Тип зарядки:</b> Нет данных<br>\n                 <b>Мощность:</b> 0<br>\n                 <b>Тип разъема:</b> /Нет данных/<br>\n                 <b>Статус:</b> Нет данных<br>\n                 <b>Время работы:</b> Нет данных<br><br>\n                 <p><input type='submit' value='Забронировать на 15 минут'>\n                 <input type='submit' value='Маршрут'></p>\n                 ",
                 "hintContent": "Зарядная станция"
             },
             "options": {
