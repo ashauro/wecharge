@@ -1,16 +1,43 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block content %}
+{% load widget_tweaks %}
+
+    <main role="main" class="container">
+<div class="container main">
 
 <h1>Авторизация</h1>
 
-    <form class="form" method="post">
+    <form class="form-signin" method="post">
     	{% csrf_token %}
-    	{{ form }}
-    	<input type="submit" value="Submit">
+		{% for field in form %}
+
+	<div class="form-group">
+		{{ field.label }}
+		{{ field|add_class:'form-control form-control-lg' }}
+		                    <small class="text-muted">{{ field.help_text }}</small>
+                    {{ field.errors }}
+	</div>
+    	{% endfor %}
+		<input class="btn btn-primary" type="submit" value="Войти">
+
+		<div class="text-center mb-4">
+        <ul class="form-link">
+      <li><a href="#">Забыли пароль?</a></li>
+      <li><a href="#">Регистрация</a></li>
+    </ul>
+        </div>
 	</form>
-<ul>
-    <li><a href="#">Забыли пароль?</a></li>
-    <li><a href="#">Регистрация</a></li>
-</ul>
+
+</div>
+
+		    </main><!-- /.container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU" type="text/javascript"></script>
+    <script src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 {% endblock %}

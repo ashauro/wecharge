@@ -1,18 +1,61 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block content %}
-<h2>Редактирование профиля {{user.username}}</h2><br>
+{% load widget_tweaks %}
+    <main role="main" class="container">
 
-<form method="POST" enctype="multipart/form-data">
-{% csrf_token %}
-<h5>Изменить основные данные</h5>
-<p>{{u_form}}</p>
-<h5>Изменить дополнительные данные</h5>
-<p>{{p_form}}</p>
-<h5>Изменить данные автомобиля</h5>
-<p>{{c_form}}</p>
-<button type="submit">Сохранить изменения</button>
-</form>
+        <div class="container main">
+
+            <h1>Редактирование профиля {{user.username}}</h1>
+
+                <form class="form-signin" enctype="multipart/form-data" method="post">
+                    {% csrf_token %}
+                    {% for field in u_form %}
+
+                <div class="form-group">
+                    {{ field.label }}
+                    {{ field|add_class:'form-control form-control-lg' }}
+                    <small class="text-muted">{{ field.help_text }}</small>
+                    {{ field.errors }}
+                </div>
+                    {% endfor %}
+                                        {% for field in p_form %}
+
+                <div class="form-group">
+                    {{ field.label }}
+                    {{ field|add_class:'form-control form-control-lg' }}
+                    <small class="text-muted">{{ field.help_text }}</small>
+                    {{ field.errors }}
+                </div>
+                    {% endfor %}
+                                        {% for field in c_form %}
+
+                <div class="form-group">
+                    {{ field.label }}
+                    {{ field|add_class:'form-control form-control-lg' }}
+                    <small class="text-muted">{{ field.help_text }}</small>
+                    {{ field.errors }}
+                </div>
+                    {% endfor %}
+                    <input class="btn btn-primary" type="submit" value="Сохранить изменения">
+
+
+                </form>
+
+        </div>
+
+
+
+    </main><!-- /.container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU" type="text/javascript"></script>
+    <script src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
 
 {% endblock %}
 

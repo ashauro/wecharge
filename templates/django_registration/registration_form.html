@@ -2,14 +2,33 @@
 {% load staticfiles %}
 
 {% block content %}
-
+{% load widget_tweaks %}
     <main role="main" class="container">
 
-    <form class="form" action="/user/register/" method="post">
-    	{% csrf_token %}
-    	{{ form }}
-    	<input type="submit" value="Submit">
-	</form>
+        <div class="container main">
+
+            <h1>Регистрация</h1>
+
+                <form class="form-signin" action="/user/register/" method="post">
+                    {% csrf_token %}
+                    {% for field in form %}
+
+                <div class="form-group">
+                    {{ field.label }}
+                    {{ field|add_class:'form-control form-control-lg' }}
+                    <small class="text-muted">{{ field.help_text }}</small>
+                    {{ field.errors }}
+                </div>
+                    {% endfor %}
+                    <input class="btn btn-primary" type="submit" value="Зарегистрироваться">
+
+                    <div class="text-center mb-4">
+                    </div>
+                </form>
+
+        </div>
+
+
 
     </main><!-- /.container -->
     <!-- Bootstrap core JavaScript
