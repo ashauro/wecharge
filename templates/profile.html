@@ -2,30 +2,39 @@
 {% load staticfiles %}
 {% block content %}
 
+
     <main role="main" class="container">
 
         <div class="container main">
 
-<h2>Профиль пользователя {{user.username}}</h2> (<a href="/users/profile/update">Изменить Профиль</a>
-)
+
+<h2>Профиль пользователя {{user.username}}</h2>
+<br>
+            <div class="row">
+          <div class="col-xs-12 col-md-4">
+          <img style="max-width:160px;border:1px solid #c1bfb9;padding:10px;margin-bottom: 2rem;" src="/media/{{user.profile.user_image}}" />
 <p>Имя: {{user.first_name}}</p>
 <p>Фамилия: {{user.last_name}}</p>
 <p>Email: {{user.email}}</p>
-<p>Картинка: {{user.profile.user_image}}</p>
-<p>Страна: {{user.profile.user_country}}</p>
+              <p>Страна: {{user.profile.user_country}}</p>
 <p>Город: {{user.profile.user_city}}</p>
+          </div>
+          <div class="col-xs-12 col-md-4">
 <h2>Автомобиль {{user.username}}</h2>
 <p>Машина: {{user.profile.user_car.name}}</p>
 <p>Госномер: {{user.profile.user_car.plate}}</p>
 <p>Мощность, кВт: {{user.profile.user_car.acc}}</p>
-
+          </div>
+          <div class="col-xs-12 col-md-4">
 <h2>Состояние счета {{user.username}}</h2>
 <p>Текущий баланс: {{user.billing.balance}} руб.</p>
 <p>Бонусы: {{user.billing.bonus_balance}} баллов</p>
 <p>Количество зарядок: {{user.billing.number_of_charges}}</p>
 <p>Потребленная мощность: {{user.billing.cunsumed_power}} кВт</p>
+          </div>
+          </div>
+<a class="btn btn-primary" href="/users/profile/update">Изменить Профиль</a>
         </div>
-
 
 
     </main><!-- /.container -->

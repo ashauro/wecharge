@@ -20,6 +20,9 @@ from django.conf.urls import url
 from chargemap import views
 from django_registration.backends.one_step.views import RegistrationView
 from rest_framework import routers, serializers, viewsets
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 # Serializers define the API representation.
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -27,10 +30,12 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         model = User
         fields = ('url', 'username', 'email', 'is_staff')
 
+
 # ViewSets define the view behavior.
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+
 
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
@@ -47,5 +52,4 @@ urlpatterns = [
     path('users/profile/', include('users.urls'), name='profile'),
     url(r'^', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
-
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
