@@ -30,14 +30,16 @@ def dojson(request):
                  <b>Статус:</b> {5}<br>
                  <b>Время работы:</b> {6}<br><br>
                  <p><input type='submit' value='Забронировать'>
-                 <input type='submit' value='Маршрут'></p>
+                 <input type='submit' value='Маршрут' onclick = 'getroute({7},{8})'></p>
                  """.format(station.charge_station_name,
                                                         station.charge_station_description,
                                                         station.charge_station_type,
                                                         station.charge_station_maxpower,
                                                         plug_type,
                                                         station.charge_station_status,
-                                                        station.charge_station_working_time),
+                                                        station.charge_station_working_time,
+                                                        station.charge_station_latitude,
+                                                        station.charge_station_longtitude),
                 "hintContent": station.charge_station_name
             },
             "options": {
