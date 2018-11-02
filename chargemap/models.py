@@ -44,41 +44,43 @@ class ChargeStationStatus (models.Model):
 
 # Рабочие часы зарядки
 class ChargeStationWorkingTime (models.Model):
-     working_time = models.CharField(max_length=100, default=None)
+     time = models.CharField(max_length=100, default=None)
      def __str__(self):
-        return self.working_time
+        return self.time
 
 # Описание зарядной станции
 class ChargeStation (models.Model):
     # Наименование места (ТЦ ХХХ, Заправка Лукойл и пр.)
-    charge_station_name = models.CharField(max_length=100, default='Зарядная станция')
+    name = models.CharField(max_length=100, default='Зарядная станция')
     # Координаты 
-    charge_station_latitude = models.FloatField(max_length=10, default=0)
-    charge_station_longtitude = models.FloatField(max_length=10, default=0)
+    latitude = models.FloatField(max_length=10, default=0)
+    longtitude = models.FloatField(max_length=10, default=0)
     # Тип зарядки
-    charge_station_type = models.ForeignKey(ChargeStationType, on_delete=models.CASCADE, default=3)
+    station_type = models.ForeignKey(ChargeStationType, on_delete=models.CASCADE, default=3)
     # Оператор (Моэск и пр)
-    charge_station_operator = models.ForeignKey(StationOperator, on_delete=models.CASCADE, default=None)
+    operator = models.ForeignKey(StationOperator, on_delete=models.CASCADE, default=None)
+    # Модель станции
+    station_model = models.CharField(max_length=100, null=True)
     # Мощность, кВт
-    charge_station_maxpower = models.IntegerField(default=0)
+    maxpower = models.IntegerField(default=0)
     # Тип разъема
-    charge_station_plug = models.ManyToManyField(ChargeStationPlugType)
+    plug = models.ManyToManyField(ChargeStationPlugType)
     # Статус: (свободна/забронирована/идет заправка)
-    charge_station_status = models.ForeignKey(ChargeStationStatus, on_delete=models.CASCADE, default=3)
+    status = models.ForeignKey(ChargeStationStatus, on_delete=models.CASCADE, default=3)
     # Оценка заправки (оценить удобство использования)
-    charge_station_score = models.FloatField(default=0.0)
+    score = models.FloatField(default=0.0)
     # Рабочие часы (24/7, по рабочим дням и пр.)
-    charge_station_working_time = models.ForeignKey(ChargeStationWorkingTime, on_delete=models.CASCADE, default=3)
+    working_time = models.ForeignKey(ChargeStationWorkingTime, on_delete=models.CASCADE, default=3)
     #Адрес заправки
-    charge_station_city = models.ForeignKey(City, on_delete=models.CASCADE, default=1, null=True)
-    charge_station_address = models.CharField(max_length=100, null=True)
+    city = models.ForeignKey(City, on_delete=models.CASCADE, default=1, null=True)
+    address = models.CharField(max_length=100, null=True)
     # Описание (пример: Находится на парковке ТЦ Globus, прямо у входа (дальний от Москвы). 
     # Доступ свободный. Открывается картой МОЭСК)
-    charge_station_description = models.TextField(max_length=300, default='Станция зарядки электромобилей')
+    description = models.TextField(max_length=300, default='Станция зарядки электромобилей')
     
 
     def __str__(self):
-        return '%s, %s' %(self.charge_station_name, self.charge_station_address)
+        return '%s, %s' %(self.name, self.address)
 
 
 

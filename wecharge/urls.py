@@ -43,6 +43,8 @@ router.register(r'users', UserViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('detail/<pk>', views.DetailStationView.as_view()),
+    path('management/<pk>', views.ManagementView.as_view()),
     path('', views.index, name='index'),
     path('dojson/', views.dojson, name='dojson'),
     path('user/register/', RegistrationView.as_view(success_url='/users/profile/'),

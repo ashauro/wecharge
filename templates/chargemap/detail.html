@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <p><h4>{{chargestation.name}}</h4></p>
+    <p>Адрес: {{chargestation.city}}, {{chargestation.address}}</p>
+    <p>Описание: {{chargestation.description}}</p>
+    <p>Тип: {{chargestation.station_type}}</p>
+    <p>Мощность: {{chargestation.maxpower}}</p>
+    <p>Типы разъемов:
+        {% for plug in chargestation.plug.all %}
+            {{  plug }}
+        {% endfor %}
+    </p>
+    <p>Статус: {{chargestation.status}}</p>
+    <p>Часы работы: {{chargestation.working_time}}</p>
+
+    {% if user.is_authenticated %}
+        Забронировать на 15 минут:
+           <input type='button' value='Да, пожалуйста' onclick="javascript:alert('Заправка забронирована')">
+    {% else %}
+        <p>Для бронирования зарядки, нужно зарегистрироваться:</p>
+        <li class="nav-item">
+                <a class="nav-link" href="/accounts/register/">Регистрация</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/accounts/login/">Вход</a>
+            </li>               
+    {% endif %}     
+
+
+{% endblock %}

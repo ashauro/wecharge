@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load user_tags %}
+
+{% block content %}
+    <p><h4>{{chargestation.name}}</h4></p>
+    <p>Адрес: {{chargestation.city}}, {{chargestation.address}}</p>
+    <p>Описание: {{chargestation.description}}</p>
+    <p>Тип: {{chargestation.station_type}}</p>
+    <p>Мощность: {{chargestation.maxpower}}</p>
+    <p>Типы разъемов:
+        {% for plug in chargestation.plug.all %}
+            {{  plug }}
+        {% endfor %}
+    </p>
+    <p>Статус: {{chargestation.status}}</p>
+    <p>Часы работы: {{chargestation.working_time}}</p>
+
+{% endblock %}
