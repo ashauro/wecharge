@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div id="map"></div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU" type="text/javascript"></script>
+    <script src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script type="text/javascript">
+    ymaps.ready(init);
+    
+    var myMap;
+    var geolocation;
+
+    function init(){
+        
+        geolocation = ymaps.geolocation;
+
+        myMap = new ymaps.Map("map", {
+            center: [55.76, 37.64],
+            zoom: 11,
+            controls: ['routeButtonControl']
+        }, {
+            searchControlProvider: 'yandex#search'
+        });
+        
+
+        var objectManager = new ymaps.ObjectManager({
+            clusterize: false,
+            gridSize: 32,
+            clusterDisableClickZoom: true
+        });
+        myMap.geoObjects.add(objectManager);
+
+        
+
+        /*geolocation.get({
+            provider: 'yandex',
+            mapStateAutoApply: true
+        }).then(function (result) {
+            // We'll mark the position calculated by IP in red.
+            result.geoObjects.options.set('preset', 'islands#redCircleIcon');
+            result.geoObjects.get(0).properties.set({
+                balloonContentBody: 'My location'
+            });
+            myMap.geoObjects.add(result.geoObjects);
+        });
+        geolocation.get({
+            provider: 'browser',
+            mapStateAutoApply: true
+        }).then(function (result) {
+            result.geoObjects.options.set('preset', 'islands#blueCircleIcon');
+            myMap.geoObjects.add(result.geoObjects);
+        });*/
+    
+
+    $.ajax({
+        url: "{% static 'js/data.json' %}"
+    }).done(function(data) {
+        objectManager.add(data);
+    });
+}
+function getroute(par1, par2) {
+    
+
+   var control = myMap.controls.get('routeButtonControl');
+
+    control.routePanel.geolocate('from');
+    control.routePanel.state.set({
+        fromEnabled: true,
+        to: [par1, par2],
+        type: "auto"
+    });
+
+    control.state.set('expanded', true);
+
+};
+
+function oldGetroute(par1, par2) {
+    
+
+    var multiRoute = new ymaps.multiRouter.MultiRoute({
+        referencePoints: [
+            myMap.geoObjects.get(1).position,
+            [par1, par2],
+        ],
+        params: {
+            results: 2
+        }
+    }, {
+        boundsAutoApply: true
+    });
+
+    myMap.geoObjects.add(multiRoute);
+
+};
+
+</script>
+{% endblock %}
