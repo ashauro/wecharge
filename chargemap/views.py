@@ -51,6 +51,9 @@ def dojson(request):
     return HttpResponse(station.charge_station_status)
 
 
-
 def index(request):
     return render(request, 'index.html')
+
+
+def charge_map(request):
+    return render(request, 'charge_map.html')

@@ -4,7 +4,6 @@ html {
 body {
   height:100%;
   margin:0px;
-  padding-top: 3.5rem;
 }
 .starter-template {
   padding: 2rem 1.5rem;
@@ -36,4 +35,36 @@ body {
 }
 .main h1 {
   text-align: center;
+}
+
+.first-screen {
+  color: #fff!important;
+  background-image: url(../images/first1_mobile.jpg);
+  background-size: cover;
+}
+.second-screen {
+  padding: 8% 0!important;
+}
+.bg-dark {
+  background-color: #558e1d!important;
+  opacity: 0.8;
+}
+.navbar-brand, .navbar {
+padding:0;
+}
+li.nav-item:hover {
+    border-bottom: 5px solid white;
+}
+li.nav-item {
+    padding: 1em 0;
+    border-bottom: 5px solid rgba(255, 255, 255, 0);
+    text-transform: uppercase;
+}
+.btn-outline-secondary {
+    color: #1e3c00;
+    border-color: #1e3c00;
+}
+.btn-outline-secondary:hover {
+    background-color: #1e3c00;
+    border-color: #1e3c00;
 }

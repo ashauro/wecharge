@@ -44,6 +44,7 @@ router.register(r'users', UserViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('map/', views.charge_map, name='charge_map'),
     path('dojson/', views.dojson, name='dojson'),
     path('user/register/', RegistrationView.as_view(success_url='/users/profile/'),
          name='django_registration_register'),

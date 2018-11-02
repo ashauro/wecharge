@@ -2,39 +2,40 @@
 {% load staticfiles %}
 
 {% block content %}
+{% include 'menu.html' with mt='index' %}
+<div class="container-fluid first-screen">
+    <div class="row">
+    <div class="position-relative overflow-hidden text-left">
+      <div class="col-md-3 offset-md-3 p-lg-5" style="padding: 8% 0!important;">
+        <h1 class="display-4 font-weight-normal">Lorem ipsum dolor sit amet</h1>
+        <p class="lead font-weight-normal">Consectetur adipiscing elit. Vestibulum magna dolor, egestas a gravida at, varius non urna. Quisque nec semper quam. Donec sit amet cursus odio, sit amet lacinia dolor. Fusce egestas rutrum dapibus. </p>
+        <a class="btn btn-outline-secondary btn-success" href="#">App Store</a> <a class="btn btn-success btn-outline-secondary" href="#">Google Play</a>
+      </div>
+      <div class="product-device box-shadow d-none d-md-block"></div>
+      <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+    </div>
+    </div>
+</div>
 
-<div id="map"></div>
+<div class="container-fluid" style="background-color: #f2f1f1;">
+    <div class="row second-screen">
+        <div class="col-md-4 offset-md-1"><img src="{% static 'images/WattsOn.png' %}" style="max-width: -webkit-fill-available;"></div>
+        <div class="col-md-5 text-center">
+            <p>Consectetur adipiscing elit. Vestibulum magna dolor, egestas a gravida at, varius non urna. Quisque nec semper quam.</p>
+            <h4>Lorem ipsum dolor sit amet</h4>
+        <div class="row"><div class="col-md-4"><img src="{% static 'images/icon-1.png' %}"><h4>Lorem ipsum dolor sit amet</h4></div>
+        <div class="col-md-4"><img src="{% static 'images/icon-2.png' %}"><h4>Vestibulum magna dolor, egestas a gravida at</h4></div>
+        <div class="col-md-4"><img src="{% static 'images/icon-3.png' %}"><h4>Donec sit amet cursus odio, sit amet lacinia dolor</h4></div></div>
+            </div>
+    </div>
+
+</div>
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU" type="text/javascript"></script>
     <script src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-  <script type="text/javascript">
-    ymaps.ready(init);
-    function init(){
-        var myMap = new ymaps.Map("map", {
-            center: [55.76, 37.64],
-            zoom: 11,
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
-        objectManager = new ymaps.ObjectManager({
-            clusterize: false,
-            gridSize: 32,
-            clusterDisableClickZoom: true
-        });
-
-    myMap.geoObjects.add(objectManager);
-
-    $.ajax({
-        url: "{% static 'js/data.json' %}"
-    }).done(function(data) {
-        objectManager.add(data);
-    });
-
-}
-</script>
 {% endblock %}
