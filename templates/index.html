@@ -25,6 +25,7 @@
         myMap = new ymaps.Map("map", {
             center: [55.76, 37.64],
             zoom: 11,
+            controls: ['routeButtonControl']
         }, {
             searchControlProvider: 'yandex#search'
         });
@@ -38,7 +39,8 @@
         myMap.geoObjects.add(objectManager);
 
         
-        geolocation.get({
+
+        /*geolocation.get({
             provider: 'yandex',
             mapStateAutoApply: true
         }).then(function (result) {
@@ -49,7 +51,7 @@
             });
             myMap.geoObjects.add(result.geoObjects);
         });
-        /*geolocation.get({
+        geolocation.get({
             provider: 'browser',
             mapStateAutoApply: true
         }).then(function (result) {
@@ -65,6 +67,22 @@
     });
 }
 function getroute(par1, par2) {
+    
+
+   var control = myMap.controls.get('routeButtonControl');
+
+    control.routePanel.geolocate('from');
+    control.routePanel.state.set({
+        fromEnabled: true,
+        to: [par1, par2],
+        type: "auto"
+    });
+
+    control.state.set('expanded', true);
+
+};
+
+function oldGetroute(par1, par2) {
     
 
     var multiRoute = new ymaps.multiRouter.MultiRoute({
