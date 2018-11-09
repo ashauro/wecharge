@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from chargemap.models import ChargeStation
 import json
+from users.forms import ContactIndexForm
 
 
 def dojson(request):
@@ -52,7 +53,8 @@ def dojson(request):
 
 
 def index(request):
-    return render(request, 'index.html')
+    form = ContactIndexForm()
+    return render(request, 'index.html', {'form': form})
 
 
 def charge_map(request):

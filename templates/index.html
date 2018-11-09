@@ -227,15 +227,21 @@ ul.timeline > li > .timeline-panel {
     <h2 class="text-center">Cвяжитесь с нами</h2>
     <form>
   <div class="row" style="background-color: #fff;padding: 3rem 0rem;margin: 2rem;border-radius: 10px;">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Имя">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Email">
-    </div>
+        {% for field in form %}
           <div class="col">
-      <input type="text" class="form-control" placeholder="Сообщение">
-    </div>
+              {{ field }}
+          </div>
+        {% endfor %}
+
+    <!--<div class="col">-->
+      <!--<input type="text" class="form-control" placeholder="Имя">-->
+    <!--</div>-->
+    <!--<div class="col">-->
+      <!--<input type="text" class="form-control" placeholder="Email">-->
+    <!--</div>-->
+          <!--<div class="col">-->
+      <!--<input type="text" class="form-control" placeholder="Сообщение">-->
+    <!--</div>-->
       <div class="col">
       <button type="submit" class="btn" style="background-color:#1e3c00;color:#fff;">Отправить</button>
     </div>
@@ -245,6 +251,13 @@ ul.timeline > li > .timeline-panel {
 </div>
 </div>
 
+
+    <footer class="footer" style="padding: 10px 0px;background: #467716!important;color:#fff;">
+      <div class="container">
+          <img src="{% static 'images/logo.png' %}" style="max-width:120px;">
+        <span class="text-muted">ООО "WATTSON"</span>
+      </div>
+    </footer>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
