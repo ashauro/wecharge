@@ -48,6 +48,9 @@ padding-top: 100px;
   background-position: center;
     margin-top: -100px;
 }
+.first-screen-text {
+  padding: 8% 0!important;
+}
 .second-screen {
   padding: 8% 0!important;
 }
@@ -224,3 +227,29 @@ ul.timeline > li > .timeline-panel {
         right: auto;
     }
 }
+
+@media (max-width: 576px){
+ .display-4 {
+    font-size: 2rem;
+    }
+    .first-screen {
+    background-position: left;
+    padding-top: 20px;
+}
+.first-screen-text {
+    padding: 10% 5%!important;
+}
+.second-screen {
+    padding: 12% 10%!important;
+}
+.timeline > li > .timeline-badge {
+    width: 80px;
+    height: 80px;
+    }
+    ul.timeline > li > .timeline-badge {
+    left: 0px;
+}
+.h4, h4 {
+    font-size: 1.2rem;
+}
+ }

@@ -1,12 +1,13 @@
 from django.db import models
 
-# Create your models here.
-
 # Адреса
+
+
 class Country (models.Model):
    country = models.CharField(max_length=100, null=True)
    def __str__(self):
        return self.country
+
 
 class City (models.Model):
     country = models.ForeignKey(Country, on_delete=models.CASCADE, default=None)
@@ -15,6 +16,8 @@ class City (models.Model):
         return '%s, %s' % (self.country, self.city)
 
 # Оператор
+
+
 class StationOperator (models.Model):
    operator = models.CharField(max_length=100, default=None)
    site = models.CharField(max_length=100, blank=True)
@@ -22,6 +25,8 @@ class StationOperator (models.Model):
        return self.operator
 
 # Типы зарядки
+
+
 class ChargeStationType (models.Model):
     station_type = models.CharField(max_length=100)
     # Схема разъема (картинка) - не реализовано
@@ -29,6 +34,8 @@ class ChargeStationType (models.Model):
         return self.station_type
 
 # Типы разъемов
+
+
 class ChargeStationPlugType (models.Model):
     plug_type = models.CharField(max_length=100)
     # Схема разъема (картинка) - не реализовано
@@ -36,6 +43,8 @@ class ChargeStationPlugType (models.Model):
         return self.plug_type
 
 # Статус зарядки
+
+
 class ChargeStationStatus (models.Model):
     status = models.CharField(max_length=100)
 
@@ -43,12 +52,16 @@ class ChargeStationStatus (models.Model):
         return self.status
 
 # Рабочие часы зарядки
+
+
 class ChargeStationWorkingTime (models.Model):
      time = models.CharField(max_length=100, default=None)
      def __str__(self):
         return self.time
 
 # Описание зарядной станции
+
+
 class ChargeStation (models.Model):
     # Наименование места (ТЦ ХХХ, Заправка Лукойл и пр.)
     name = models.CharField(max_length=100, default='Зарядная станция')
@@ -87,4 +100,3 @@ class ChargeStation (models.Model):
 #Фото заправки - не реализовано
 #Стоимость заправки (тарифы) - не реализовано
 #Способы оплаты (карта оператора, NFC, кредитная карта) - не реализовано
-    
