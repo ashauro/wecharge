@@ -76,6 +76,7 @@
     <h2 class="text-center">Cвяжитесь с нами</h2>
     <form action="{% url 'mail_sender' %}" method="post">
   <div class="row" style="background-color: #fff;padding: 3rem 0rem;margin: 2rem;border-radius: 10px;">
+      {% csrf_token %}
         {% for field in form %}
           <div class="col">
               {{ field }}

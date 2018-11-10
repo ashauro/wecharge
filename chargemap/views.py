@@ -1,7 +1,8 @@
 from django.views import generic
 from django.shortcuts import render
 from chargemap.models import ChargeStation
-from users.forms import ContactIndexForm
+from .forms import ContactIndexForm
+from django.http import HttpResponse
 from django.core.mail import send_mail, BadHeaderError
 from . import dojson
 
