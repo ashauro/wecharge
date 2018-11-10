@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+{% include 'menu.html' with mt='contacts' %}
+
+<div class="container">
+    <div class="row">
+          <div class="align-items-center mx-auto">
+                <h2>Спасибо!</h2><br>
+                <hr><br>
+                <p>Мы получили ваше письмо, наш менеджер свяжется с вами в ближайшее время.</p>
+          </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
+
+{% block footer %}
+
+{% endblock footer %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+{% include 'menu.html' with mt='contacts' %}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-xs-12 col-md-4">
+            <div class="col-xs-12">
+                <h2>Контакты</h2>
+                <hr>
+                <p>Телефон: +7 (495) 671-39-54</p>
+                <p>Email: info@wattson-electric.ru</p>
+                <p>Адрес: Россия, Московская область, Одинцовский район, Сколково, Новая улица, 100</p>
+            </div>
+            <div class="col-xs-12">
+                <form action="{% url 'mail_sender' %}" method="post">{% csrf_token %}        {% for field in form %}
+
+                    <div class="form-group">
+              {{ field }}
+  </div>
+
+
+
+
+        {% endfor %} <button type="submit" class="btn" style="background-color:#1e3c00;color:#fff;">Отправить</button> </form></div>
+            </div>
+
+        <div class="col-xs-12 col-md-6"><iframe src="https://yandex.ru/map-widget/v1/-/CBFARAEUlC" width="560" height="400" frameborder="1" allowfullscreen="true"></iframe></div>
+
+    </div>
+
+</div>
+
+{% endblock %}
+
+
+{% block footer %}
+
+{% endblock footer %}

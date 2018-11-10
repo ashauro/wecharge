@@ -43,10 +43,12 @@ router.register(r'users', UserViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('detail/<pk>', views.DetailStationView.as_view()),
+    path('map/detail/<pk>', views.DetailStationView.as_view()),
     path('management/<pk>', views.ManagementView.as_view()),
     path('', views.index, name='index'),
-    path('dojson/', views.dojson, name='dojson'),
+    path('map/', views.charge_map, name='charge_map'),
+    path('contacts/', views.contacts, name='contacts'),
+    path('form-send/', views.mail_sender, name='mail_sender'),
     path('user/register/', RegistrationView.as_view(success_url='/users/profile/'),
          name='django_registration_register'),
     path('accounts/', include('django_registration.backends.one_step.urls')),
