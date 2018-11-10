@@ -45,6 +45,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('map/', views.charge_map, name='charge_map'),
+    path('contacts/', views.contacts, name='contacts'),
+    path('form-send/', views.mail_sender, name='mail_sender'),
     path('dojson/', views.dojson, name='dojson'),
     path('user/register/', RegistrationView.as_view(success_url='/users/profile/'),
          name='django_registration_register'),

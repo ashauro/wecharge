@@ -1,6 +1,6 @@
 {% load staticfiles %}
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand my-0 ml-md-4 font-weight-normal" href="#">
+    <a class="navbar-brand my-0 ml-md-4 font-weight-normal" href="{% url 'index' %}">
     <img src="{% static 'images/logo.png' %}" alt="" style="width:auto;max-width: 130px;">
   </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,14 +15,14 @@
           <li class="nav-item  {% if mt == 'charge_map' %}active{% endif %}">
             <a class="nav-link" href="{% url 'charge_map' %}">Карта заправок<span class="sr-only">(current)</span></a>
           </li>
+          <!--<li class="nav-item">-->
+            <!--<a class="nav-link" href="{% url 'index' %}">Услуги<span class="sr-only">(current)</span></a>-->
+          <!--</li>-->
+          <!--<li class="nav-item">-->
+            <!--<a class="nav-link" href="{% url 'index' %}">Партнерам<span class="sr-only">(current)</span></a>-->
+          <!--</li>-->
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'index' %}">Услуги<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'index' %}">Партнерам<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'index' %}">Контакты<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{% url 'contacts' %}">Контакты<span class="sr-only">(current)</span></a>
           </li>
           {% if user.is_authenticated %}
           <li class="nav-item">
