@@ -5,6 +5,9 @@ body {
   height: 100%;
   margin:0px;
 }
+a, a:hover {
+color: #5aa112;
+}
 .starter-template {
   padding: 2rem 1.5rem;
   text-align: center;
@@ -40,16 +43,16 @@ body {
   text-align: center;
 }
 #main{
-min-height: 100%;
-margin-bottom: -54px;
-padding-top: 100px;
+min-height: calc(100% - 44px);
+/*margin-bottom: -54px;*/
+padding-top: 80px;
 }
 .first-screen {
   color: #fff!important;
   background-image: url(../images/first1_mobile.jpg);
   background-size: cover;
   background-position: center 20%;
-    margin-top: -100px;
+    margin-top: -80px;
 }
 .first-screen-text {
   padding: 8% 0!important;
@@ -89,6 +92,10 @@ li.nav-item {
 }
 .text-muted {
     color: #d8d8d8!important;
+}
+.text-charge {
+    color: #505050!important;
+        line-height: 1em;
 }
 .contact-block {
   color: #495057;
