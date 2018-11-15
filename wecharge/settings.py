@@ -151,6 +151,6 @@ LOGOUT_REDIRECT_URL = '/'
 
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = "***"
-EMAIL_HOST_PASSWORD = "***"
+EMAIL_HOST_USER = "robot@rudut.ru"
+EMAIL_HOST_PASSWORD = "KsMna8d*jOpiw7"
 EMAIL_USE_SSL = True

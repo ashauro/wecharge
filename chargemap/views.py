@@ -52,9 +52,9 @@ def mail_sender(request):
             """.format(name, email, message)
             subject = 'WattsON - форма обратной связи'
 
-            recipients = ['***']
+            recipients = ['a.shauro@gmail.com']
             try:
-                send_mail(subject, mail_text, '***', recipients)
+                send_mail(subject, mail_text, 'robot@rudut.ru', recipients)
             except BadHeaderError:
                 return HttpResponse('Invalid header found')
             return render(request, 'thanks.html')
