@@ -11,16 +11,20 @@ class DetailStationView(generic.DetailView):
     model = ChargeStation
     template_name = 'chargemap/detail.html'
 
+
 class ManagementView(generic.DetailView):
     model = ChargeStation
     template_name = 'chargemap/management.html'
+
 
 def index(request):
     form = ContactIndexForm()
     return render(request, 'index.html', {'form': form, 'mt': 'index'})
 
+
 def detail(request):
     return render(request, 'detail.html')
+
 
 def charge_map(request):
     return render(request, 'charge_map.html', {'mt': 'charge_map'})
@@ -29,6 +33,10 @@ def charge_map(request):
 def contacts(request):
     form = ContactIndexForm()
     return render(request, 'contacts-page.html', {'mt': 'contacts', 'form': form})
+
+
+def comingsoon(request):
+    return render(request, 'coming-soon.html')
 
 
 def mail_sender(request):

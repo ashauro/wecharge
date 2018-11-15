@@ -1,43 +1,190 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block content %}
+{% include 'menu.html' %}
+
+        <div class="container" style="margin-bottom: 2%;">
 
 
-    <main role="main" class="container">
-
-        <div class="container main">
-
-
-<h2>Профиль пользователя {{user.username}}</h2>
-<br>
+<!--<h2>Профиль пользователя {{user.username}}</h2>-->
+<!--<br>-->
             <div class="row">
-          <div class="col-xs-12 col-md-4">
-          <img style="max-width:160px;border:1px solid #c1bfb9;padding:10px;margin-bottom: 2rem;" src="/media/{{user.profile.user_image}}" />
-<p>Имя: {{user.first_name}}</p>
-<p>Фамилия: {{user.last_name}}</p>
-<p>Email: {{user.email}}</p>
-              <p>Страна: {{user.profile.user_country}}</p>
-<p>Город: {{user.profile.user_city}}</p>
+                <div class="col-md-6">
+          <div class="col-xs-12">
+
+                <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header"style="background-color:yellow;">
+          <h5 class="modal-title">ПРОФИЛЬ <span class="text-right">3 500 Р +</span></h5>
+      </div>
+      <div class="modal-body">
+          <div class="row">
+          <div class="col-sm-6">
+             <form>
+  <div class="form-group">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Имя" value="{{user.first_name}}">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Фамилия" value="{{user.last_name}}">
+  </div>
+  <div class="form-group">
+    <input type="email" class="form-control" id="exaeInputPassword1" placeholder="Email" value="{{user.email}}">
+  </div>
+   <div class="form-group">
+    <input type="text" class="form-control" id="exampleInputPword1" placeholder="Город" value="{{user.profile.user_city}}">
+  </div>
+  <button type="submit" class="btn">Сохранить изменения</button>
+</form>
           </div>
-          <div class="col-xs-12 col-md-4">
-<h2>Автомобиль {{user.username}}</h2>
-<p>Машина: {{user.profile.user_car.name}}</p>
-<p>Госномер: {{user.profile.user_car.plate}}</p>
-<p>Мощность, кВт: {{user.profile.user_car.acc}}</p>
+          <div class="col-sm-6"> <img style="max-width:160px;border-radius: 15px;" src="/media/{{user.profile.user_image}}" /> </div>
+          </div></div>
+
+    </div>
+  </div>
+
           </div>
-          <div class="col-xs-12 col-md-4">
-<h2>Состояние счета {{user.username}}</h2>
+
+
+                              <div class="col-xs-12">
+
+                <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">ИСТОРИЯ ЗАПРАВОК</h5>
+      </div>
+      <div class="modal-body">
+          <div class="row">
+        <div class="col-8 text-right">
+             <form style="display: flex;">
+                 <input class="form-control" placeholder="Введите что-то">
+              <button type="submit" class="btn text-center" >Найти</button>
+        </form>
+        </div>
+            <div class="col-4">
+
+                <select class="form-control" id="exampleFormControlSelect1">
+      <option>Фильтр</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+            </div>
+        </div>
+
+
+          <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Дата</th>
+      <th scope="col">Адрес</th>
+      <th scope="col">Квт</th>
+      <th scope="col">Цена</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">09.11.2018</th>
+      <td>Краснопресненская, 4</td>
+      <td>35</td>
+      <td>324 руб.</td>
+    </tr>
+    <tr>
+      <th scope="row">14.11.2018</th>
+      <td>Гурьевский проезд, 34</td>
+      <td>28</td>
+      <td>126 руб.</td>
+    </tr>
+    <tr>
+      <th scope="row">17.11.2018</th>
+      <td>Якорная, 8к2</td>
+      <td>22</td>
+      <td>221 руб.</td>
+    </tr>
+  </tbody>
+</table>
+
+
 <p>Текущий баланс: {{user.billing.balance}} руб.</p>
 <p>Бонусы: {{user.billing.bonus_balance}} баллов</p>
 <p>Количество зарядок: {{user.billing.number_of_charges}}</p>
 <p>Потребленная мощность: {{user.billing.cunsumed_power}} кВт</p>
+      </div>
+
+    </div>
+  </div>
+
+
+          </div>
+
+
+
+
+
+                </div>
+
+<div class="col-md-6">
+
+          <div class="col-xs-12">
+
+                <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">АВТОМОБИЛИ</h5>
+      </div>
+      <div class="modal-body">
+          <div class="row">
+          <div class="col-sm-6">
+             <form>
+  <div class="form-group">
+    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Машина" value="{{user.profile.user_car.name}}">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control"  placeholder="Гос номер" value="{{user.profile.user_car.plate}}">
+  </div>
+  <button type="submit" class="btn">Сохранить изменения</button>
+</form>
+          </div>
+          <div class="col-sm-6"> <img style="max-width:160px;border-radius: 15px;" src="/media/{{user.profile.user_image}}" /> </div>
+
+
+          </div>
+
+          <hr>
+
+          <div class="row">
+          <div class="col-sm-6">
+             <form>
+  <div class="form-group">
+    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Машина" value="{{user.profile.user_car.name}}">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control"  placeholder="Гос номер" value="{{user.profile.user_car.plate}}">
+  </div>
+  <button type="submit" class="btn">Сохранить изменения</button>
+</form>
+          </div>
+          <div class="col-sm-6"> <img style="max-width:160px;border-radius: 15px;" src="/media/{{user.profile.user_image}}" /> </div>
+
+
+          </div>
+
+      <div class="modal-footer">
+        + Добавить автомобиль
+      </div>
+    </div>
+  </div>
+
+
           </div>
           </div>
-<a class="btn btn-primary" href="/users/profile/update">Изменить Профиль</a>
+
+          </div>
+<!--<a class="btn btn-primary" href="/users/profile/update">Изменить Профиль</a>-->
+        </div>
         </div>
 
-
-    </main><!-- /.container -->
+    <!-- /.container -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

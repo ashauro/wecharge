@@ -3,7 +3,16 @@
 
 
 {% block head %}
-<style></style>
+<style>
+.bg-dark {
+  opacity: 0.8;
+}
+
+.bg-dark.scrolled {
+  opacity: 1;
+}
+
+}</style>
 {% endblock %}
 
 {% block content %}
@@ -11,12 +20,12 @@
 <div class="container-fluid first-screen">
     <div class="row">
     <div class="position-relative overflow-hidden text-left">
-      <div class="col-md-3 offset-md-3 p-lg-5 first-screen-text">
-        <h1 class="display-4 font-weight-normal">Сервис для Электромобилей</h1>
+      <div class="col-md-5 offset-md-3 p-lg-5 first-screen-text">
+        <h1 class="display-4 font-weight-normal">Сервис для электромобилей</h1>
         <p class="lead font-weight-normal">Вы гоняете на электрокаре, но найти свободную заправку для вас адовый геморрой?
         Тогда наш сервис предназначен для вас! <br>
         Скачивайте наше приложение во всех app-сторах страны. </p>
-        <a class="btn btn-outline-secondary btn-success" href="#">App Store</a> <a class="btn btn-success btn-outline-secondary" href="#">Google Play</a>
+        <a class="btn btn-outline-secondary btn-success" href="#"><img class="img-responsive" src="{% static 'images/apple.png' %}">App Store</a> <a class="btn btn-success btn-outline-secondary" href="#"><img class="img-responsive" src="{% static 'images/android-logo.png' %}">Google Play</a>
       </div>
       <div class="product-device box-shadow d-none d-md-block"></div>
       <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
@@ -94,3 +103,14 @@
 
 
 {% endblock %}
+
+{% block footer %}
+<script>
+$(function () {
+  $(document).scroll(function () {
+	  var $nav = $(".fixed-top");
+	  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+	});
+});
+</script>
+{% endblock footer %}
